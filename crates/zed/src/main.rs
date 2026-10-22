@@ -732,6 +732,8 @@ fn main() {
         image_viewer::init(cx);
         pdf_viewer::init(cx);
         audio_viewer::init(cx);
+        #[cfg(any(target_os = "macos", target_os = "windows"))]
+        video_viewer::init(cx);
         repl::notebook::init(cx);
         diagnostics::init(cx);
 
